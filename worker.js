@@ -4,6 +4,7 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request) {
     // Get the unique ID from the request URL
+    // This commit is compleatly working fine with minimal fewatures  
     const url = new URL(request.url);
     const id = url.searchParams.get("id");
     // Get the list of URLs from the raw text file
