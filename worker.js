@@ -2,6 +2,7 @@ addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
 })
 
+
 async function handleRequest(request) {
     // Get the unique ID from the request URL
     // This commit is compleatly working fine with minimal fewatures  
