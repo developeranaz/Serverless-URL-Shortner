@@ -9,7 +9,7 @@ async function handleRequest(request) {
     const url = new URL(request.url);
     const id = url.searchParams.get("id");
     // Get the list of URLs from the raw text file
-    const urlList = await fetch('https://gist.githubusercontent.com/developeranaz/e3ed847f88459106498b615375c2b902/raw')
+    const urlList = await fetch('https://raw.githubusercontent.com/developeranaz/Serverless-URL-Shortner/main/urls.txt')
     .then(response => response.text())
     .then(text => text.split('\n'))
     .catch(error => {
