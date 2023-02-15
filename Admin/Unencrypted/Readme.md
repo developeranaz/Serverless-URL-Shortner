@@ -1,2 +1,2 @@
-# Warning This method is only for local usage, means the index is downloaded in any device, edit your personal github token, an existing gist id and its filename and access it only via LOCALLY.
-#ITS TOO DANGEROUS  TO POST YOUR GITHUB YOKEN PUBLICLY. SO KEEP IT LOCALLY
+
+# Caution: This HTML file is only intended to be used on the localhost or by opening it locally via a web browser. Serving this webpage publicly is not recommended as it can lead to the exposure of both the HTML and your access tokens.
