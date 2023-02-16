@@ -41,6 +41,13 @@ To create a Gist link, follow these steps:
 7. Once the Gist is created, copy the URL of the page and save it for later.
 8. In your HTML file, replace the file name, Gist ID, and URL as needed.
 
+for example The link https://gist.github.com/developeranaz/919999999999999999055346c contains the unique ID 919999999999999999055346c
+
+
+![Demo](https://raw.githubusercontent.com/developeranaz/Serverless-URL-Shortner/main/admin-lite-mode-unencrypted/Admin/Unencrypted/1.png)
+
+https://github.com/developeranaz//edit/admin-lite-mode-unencrypted/Admin/Unencrypted/Readme.md
+
 ## Obtaining a GitHub Token with Only Gist Access
 
 To obtain a GitHub token with only Gist access, follow these steps:
