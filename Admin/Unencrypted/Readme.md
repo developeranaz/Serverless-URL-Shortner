@@ -46,7 +46,7 @@ for example The link https://gist.github.com/developeranaz/919999999999999999055
 
 ![Demo](https://raw.githubusercontent.com/developeranaz/Serverless-URL-Shortner/main/admin-lite-mode-unencrypted/Admin/Unencrypted/1.png)
 
-https://github.com/developeranaz//edit/admin-lite-mode-unencrypted/Admin/Unencrypted/Readme.md
+
 
 ## Obtaining a GitHub Token with Only Gist Access
 
