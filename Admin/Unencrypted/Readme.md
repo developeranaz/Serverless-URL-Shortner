@@ -20,6 +20,9 @@ const GITHUB_TOKEN = 'ghp_XxXxxXXXxXX7XCcCK';
 ```
 
 `GIST_ID`: The ID of your Gist file where the short URLs are stored
+
 `FILE_NAME`: The name of the file within the Gist where the short URLs are stored
+
 `GITHUB_TOKEN`: A personal access token with the necessary permissions to access your Gist file
+
 Once you have updated the values, you can open the HTML file in your web browser to access the admin panel.
