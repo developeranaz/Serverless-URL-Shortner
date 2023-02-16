@@ -26,3 +26,31 @@ const GITHUB_TOKEN = 'ghp_XxXxxXXXxXX7XCcCK';
 `GITHUB_TOKEN`: A personal access token with the necessary permissions to access your Gist file
 
 Once you have updated the values, you can open the HTML file in your web browser to access the admin panel.
+
+
+## Creating a Gist Link
+
+To create a Gist link, follow these steps:
+
+1. Create a GitHub account if you don't already have one.
+2. Go to gist.github.com in your web browser.
+3. Click the "New gist" button in the top-right corner of the page.
+4. In the "Filename" field, enter a unique filename for your Gist.
+5. In the "Add file" field, enter any text you like on the first line.
+6. Click the "Create public gist" button at the bottom of the page.
+7. Once the Gist is created, copy the URL of the page and save it for later.
+8. In your HTML file, replace the file name, Gist ID, and URL as needed.
+
+## Obtaining a GitHub Token with Only Gist Access
+
+To obtain a GitHub token with only Gist access, follow these steps:
+
+1. Log in to your GitHub account.
+2. Go to the "Settings" page for your account.
+3. Click the "Developer settings" link in the sidebar.
+4. Click the "Personal access tokens" link in the sidebar.
+5. Click the "Generate new token" button.
+6. In the "Note" field, enter a description for the token (e.g., "Gist access token").
+7. Under "Select scopes", click the checkbox next to "gist".
+8. Click the "Generate token" button at the bottom of the page.
+9. Copy the token that is displayed on the screen and use it as needed in your code.
