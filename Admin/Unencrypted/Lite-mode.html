@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+  </head>
+  <body>
+    <h1>URL Shortener</h1>
+    <label for="uniqueid">Unique ID:</label>
+    <input type="text" id="uniqueid" name="uniqueid">
+    <br>
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url">
+    <br>
+    <button id="shorten-btn">Shorten</button>
+    <p id="status"></p>
+    <script>
+      const GIST_ID = '1xxx1x1x1x1x1x1x1x1';
+      const FILE_NAME = 'your-gist-filename.txt';
+      const GITHUB_TOKEN = 'ghp_XxXxxXXXxXX7XCcCK';
+
+      const uniqueidInput = document.getElementById('uniqueid');
+      const urlInput = document.getElementById('url');
+      const shortenBtn = document.getElementById('shorten-btn');
+      const statusMsg = document.getElementById('status');
+
+      shortenBtn.addEventListener('click', () => {
+        const uniqueid = uniqueidInput.value;
+        const url = urlInput.value;
+
+        fetch(`https://api.github.com/gists/${GIST_ID}`, {
+          headers: {
+            'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          },
+        })
+          .then(res => res.json())
+          .then(gist => {
+            const fileContent = gist.files[FILE_NAME].content;
+
+            const newLine = `${uniqueid} ${url}\n`;
+            const updatedContent = fileContent + newLine;
+
+            return fetch(`https://api.github.com/gists/${GIST_ID}`, {
+              method: 'PATCH',
+              headers: {
+                'Authorization': `Bearer ${GITHUB_TOKEN}`,
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                files: {
+                  [FILE_NAME]: {
+                    content: updatedContent,
+                  },
+                },
+              }),
+            });
+          })
+          .then(res => {
+            if (res.ok) {
+              statusMsg.textContent = 'URL shortened successfully!';
+              uniqueidInput.value = '';
+              urlInput.value = '';
+            } else {
+              statusMsg.textContent = 'Error shortening URL.';
+            }
+          })
+          .catch(err => {
+            console.error(err);
+            statusMsg.textContent = 'Error shortening URL.';
+          });
+      });
+    </script>
+  </body>
+</html>
