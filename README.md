@@ -32,4 +32,4 @@ ghi789 https://example3.com
 and a request is made to `https://example.com?id=abc123`, the script will redirect the user to `https://example1.com`.
 
 ## TODO and Limitations
-I have not yet created an admin page for the URL shortener to add or remove shortened links. I will make it later. For now, please edit your raw text URL in your hosted location. I have used a raw Gist GitHub link, which can be edited later using our GitHub account. I am not aware of any security issues or disadvantages for this project, as using Gist GitHub or personal GitHub may have some rate limits. You can customize this to meet your own needs. I made this project for personal use.
+I have not yet created an encrypted admin page for the URL shortener to add or remove shortened links. I will make it later. For now, please edit your raw text URL in your hosted location. I have used a raw Gist GitHub link, which can be edited later using our GitHub account. I am not aware of any security issues or disadvantages for this project, as using Gist GitHub or personal GitHub may have some rate limits. You can customize this to meet your own needs. I made this project for personal use.
