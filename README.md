@@ -4,6 +4,32 @@ Serverless URL shortener based on raw text link via cloudflare workers
 
 This JavaScript script uses the Fetch API and the `addEventListener` function to handle a request event and redirect the user to a specific URL based on a unique ID passed in the request URL.
 
+# How to deploy to Cloudflare and create an account
+
+## Creating a Cloudflare account
+1. Go to the Cloudflare website at https://www.cloudflare.com/.
+2. Click on the "Sign Up" button in the top right corner of the page.
+3. Follow the prompts to create your account.
+
+## Deploying to Cloudflare
+1. Login to your Cloudflare account.
+2. Go to the "Workers" section of the Cloudflare dashboard.
+3. Click on the "Create a Worker" button.
+4. In the "Script" section, copy the contents of your `worker.js` file.
+5. Replace the 12th line of the `worker.js` file with the URL of your hosted application. For example:
+
+```
+const urlList = await fetch('https://raw.githubusercontent.com/developeranaz/Serverless-URL-Shortner/main/urls.txt')
+
+```
+
+6. Click on the "Save and Deploy" button.
+7. Test your worker by sending a request to your Cloudflare worker URL.
+
+Congratulations! Your application is now deployed to Cloudflare.
+
+
+
 ## How it works
 
 1. The script listens for a `fetch` event using the `addEventListener` function and calls the `handleRequest` function when the event is triggered. The request object is passed to the `handleRequest` function as an argument.
